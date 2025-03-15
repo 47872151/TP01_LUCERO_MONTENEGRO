@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.ttf");
+  }
+
+body {
+    background-color: rgb(49, 46, 83);
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container.login {
+    background: rgb(96, 89, 167);
+    padding: 3%;
+    border-radius: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    width: 100%;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10%;
+}
+
+label {
+    font-weight: 600%;
+    color: #FFFFFF;
+}
+
+input.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.btn-primary {
+    background-color: rgb(58, 57, 71);
+    border: none;
+    padding: 5%;
+    font-size: 100%;
+    border-radius: 2%;
+}
+
+.btn-primary:hover {
+    background-color: rgb(42, 41, 52);
+}
