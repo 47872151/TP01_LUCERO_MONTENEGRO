@@ -2,7 +2,6 @@ function validarForm() {
     
     // Validar nombre
     let nombre = document.getElementById('nombre').value;
-    console.log(nombre);
     let nombreValido = false;
     if (nombre.length >= 3) {
         nombreValido = true;
