@@ -1,5 +1,7 @@
 function validarForm() {
-    
+    const alertaVerde = document.getElementById("alertaVerde");
+    const alertaRojo = document.getElementById("alertaRojo");
+
     // Validar nombre
     let nombre = document.getElementById('nombre').value;
     let nombreValido = false;
@@ -22,20 +24,41 @@ function validarForm() {
         contraseñaValida = true;
     }
 
+    let mensaje = "";
+    let mensaje2 = "";
+
+    // Limpiar alertas antes de validar
+    alertaRojo.style.display = "none";
+    alertaVerde.style.display = "none";
+
     // Comprobar validaciones
     if (!nombreValido) {
-        alert('El nombre debe contener al menos tres caracteres');
+        mensaje = 'El nombre debe contener al menos tres caracteres';
+        alertaRojo.innerHTML = mensaje;
+        alertaRojo.style.display = "block";
         return false;
     }
     if (!mailValido) {
-        alert('Introduzca un mail válido por favor');
+        mensaje = 'Introduzca un mail válido por favor';
+        alertaRojo.innerHTML = mensaje;
+        alertaRojo.style.display = "block";
         return false;
     }
     if (!contraseñaValida) {
-        alert('Las contraseñas deben ser iguales, contener al menos una letra y un número, y tener al menos 8 caracteres.');
+        mensaje = 'Las contraseñas deben ser iguales, contener al menos una letra y un número, y tener al menos 8 caracteres.';
+        alertaRojo.innerHTML = mensaje;
+        alertaRojo.style.display = "block";
         return false;
     }
-    
-    alert('Formulario enviado correctamente!');
-    registrarseForm.submit();
+
+    // Si todo es válido
+    mensaje2 = 'Formulario enviado correctamente.';
+    alertaVerde.innerHTML = mensaje2;
+    alertaVerde.style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById('registrarseForm').submit();
+    }, 5000);
+
+    return false;
 }

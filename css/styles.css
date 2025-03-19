@@ -52,3 +52,14 @@ input.form-control:focus {
 .btn-primary:hover {
     background-color: rgb(42, 41, 52);
 }
+
+.alert {
+    position: fixed;   /* Fija las alertas en la pantalla */
+    top: 20px;         /* Establece la distancia desde la parte superior de la ventana */
+    left: 50%;         /* Centra la alerta horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal para que esté centrada */
+    z-index: 1050;     /* Asegúrate de que las alertas estén por encima de otros elementos */
+    width: 90%;        /* Opcional: puedes ajustar el ancho de la alerta */
+    max-width: 500px;  /* Opcional: establece un ancho máximo para las alertas */
+    margin: 0 auto;    /* Centra la alerta si no tienes un ancho fijo */
+  }
