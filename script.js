@@ -1,3 +1,4 @@
+
 function validarForm() {
     const alertaVerde = document.getElementById("alertaVerde");
     const alertaRojo = document.getElementById("alertaRojo");
@@ -62,3 +63,18 @@ function validarForm() {
 
     return false;
 }
+
+
+document.getElementById('togglePassword1').addEventListener('click', function() {
+    var contraseñaField = document.getElementById('contraseña');
+    var type = contraseñaField.type === 'password' ? 'text' : 'password';
+    contraseñaField.type = type;
+    var icon = this.querySelector('span');
+});
+
+
+document.getElementById('togglePassword2').addEventListener('click', function() {
+    var confirmarContraseñaField = document.getElementById('confirmarContraseña');
+    var type = confirmarContraseñaField.type === 'password' ? 'text' : 'password';
+    confirmarContraseñaField.type = type;
+});

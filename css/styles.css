@@ -54,12 +54,46 @@ input.form-control:focus {
 }
 
 .alert {
-    position: fixed;   /* Fija las alertas en la pantalla */
-    top: 20px;         /* Establece la distancia desde la parte superior de la ventana */
-    left: 50%;         /* Centra la alerta horizontalmente */
-    transform: translateX(-50%); /* Ajusta la posición horizontal para que esté centrada */
-    z-index: 1050;     /* Asegúrate de que las alertas estén por encima de otros elementos */
-    width: 90%;        /* Opcional: puedes ajustar el ancho de la alerta */
-    max-width: 500px;  /* Opcional: establece un ancho máximo para las alertas */
-    margin: 0 auto;    /* Centra la alerta si no tienes un ancho fijo */
-  }
+  position: fixed;   
+  top: 20px;         
+  left: 50%;         
+  transform: translateX(-50%); 
+  z-index: 1050;     
+  width: 90%;        
+  max-width: 500px;  
+  margin: 0 auto;    
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding-right: 40px; /* Espacio suficiente para el icono */
+}
+
+.form-group button {
+    position: absolute;
+    right: 10px; /* Alinea el botón al lado derecho del campo de entrada */
+    top: 70%;
+    transform: translateY(-50%); /* Centra verticalmente el botón en el campo */
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.form-group .material-symbols-outlined {
+    font-size: 20px; /* Ajusta el tamaño del icono si es necesario */
+    color: #333; /* Color del icono */
+}
+
+.btn-secondary{
+    --bs-btn-hover-bg: none !important;
+    --bs-btn-active-bg: none !important;
+    --bs-btn-disabled-bg: none !important;
+}
+
+
